@@ -136,3 +136,29 @@ type LatestPrice struct {
 	ETHUSD          float64 `json:"ethusd,string"`
 	ETHUSDTimestamp Time    `json:"ethusd_timestamp"`
 }
+
+type Log struct {
+	// Consensus fields:
+	// address of the contract that generated the event
+	Address string `json:"address" `
+	// list of topics provided by the contract.
+	Topics []string `json:"topics"`
+	// supplied by the contract, usually ABI-encoded
+	Data []byte `json:"data"`
+
+	// Derived fields. These fields are filled in by the node
+	// but not secured by consensus.
+	// block in which the transaction was included
+	BlockNumber string `json:"blockNumber"`
+	GasPrice    string `json:"gasPrice"`
+	GasUsed     string `json:"gasUsed"`
+	TimeStamp   string `json:"timeStamp"`
+	// hash of the transaction
+	TxHash string `json:"transactionHash"`
+	// index of the transaction in the block
+	TxIndex string `json:"transactionIndex"`
+	// hash of the block in which the transaction was included
+	BlockHash string `json:"blockHash"`
+	// index of the log in the block
+	Index string `json:"logIndex"`
+}

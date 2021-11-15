@@ -1,3 +1,3 @@
-module github.com/nanmu42/etherscan-api
+module github.com/yfwss/etherscan-api
 
 go 1.13
