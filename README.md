@@ -1,4 +1,4 @@
-**English** | [中文](https://github.com/nanmu42/etherscan-api/blob/master/README_ZH.md)
+**English** | [中文](https://github.com/yfwss/etherscan-api/blob/master/README_ZH.md)
 
 # etherscan-api
 
@@ -12,14 +12,14 @@ Golang client for the Etherscan.io API(and its families like BscScan), with near
 # Usage
 
 ```bash
-go get github.com/nanmu42/etherscan-api
+go get github.com/yfwss/etherscan-api/v2
 ```
 
 Create an API instance and off you go. :rocket:
 
 ```go
 import (
-	"github.com/nanmu42/etherscan-api"
+	"github.com/yfwss/etherscan-api/v2"
 	"fmt"
 )
 
