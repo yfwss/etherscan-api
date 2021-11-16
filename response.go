@@ -144,7 +144,7 @@ type Log struct {
 	// list of topics provided by the contract.
 	Topics []string `json:"topics"`
 	// supplied by the contract, usually ABI-encoded
-	Data []byte `json:"data"`
+	Data string `json:"data"`
 
 	// Derived fields. These fields are filled in by the node
 	// but not secured by consensus.
@@ -157,8 +157,6 @@ type Log struct {
 	TxHash string `json:"transactionHash"`
 	// index of the transaction in the block
 	TxIndex string `json:"transactionIndex"`
-	// hash of the block in which the transaction was included
-	BlockHash string `json:"blockHash"`
 	// index of the log in the block
 	Index string `json:"logIndex"`
 }
