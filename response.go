@@ -150,13 +150,13 @@ type Log struct {
 	// but not secured by consensus.
 	// block in which the transaction was included
 	BlockNumber string `json:"blockNumber"`
+	TimeStamp   string `json:"timeStamp"`
 	GasPrice    string `json:"gasPrice"`
 	GasUsed     string `json:"gasUsed"`
-	TimeStamp   string `json:"timeStamp"`
+	// index of the log in the block
+	Index string `json:"logIndex"`
 	// hash of the transaction
 	TxHash string `json:"transactionHash"`
 	// index of the transaction in the block
 	TxIndex string `json:"transactionIndex"`
-	// index of the log in the block
-	Index string `json:"logIndex"`
 }
