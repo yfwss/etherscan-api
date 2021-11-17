@@ -9,6 +9,6 @@ func (c *Client) GetLogs(address string, fromBlock string, toBlock string, topic
 		"topic0":    topic0,
 	}
 	compose(param, "address", address)
-	err = c.call("logs", "getLogs", param, logs)
+	err = c.call("logs", "getLogs", param, &logs)
 	return
 }
